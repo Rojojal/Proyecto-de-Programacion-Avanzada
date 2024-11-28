@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace Libreria.Models
+{
+    public class PedidosLista
+    {
+        [Key]
+        public int Id { get; set; }
+        public string IdProducto { get; set; } 
+        public string Nombre { get; set; } 
+        public int Cantidad { get; set; }
+        public decimal Precio { get; set; }
+        public decimal Subtotal => Cantidad * Precio;
+
+        public virtual Pedido Pedido { get; set; }
+    }
+}
