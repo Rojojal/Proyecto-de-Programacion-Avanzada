@@ -13,10 +13,8 @@ namespace Libreria.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Productos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

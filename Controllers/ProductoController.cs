@@ -14,13 +14,13 @@ namespace Libreria.Controllers
     {
         private LibreriaDbContext db = new LibreriaDbContext();
 
-        // GET: Productoes
+        // GET: Productos
         public ActionResult Index()
         {
             return View(db.Productos.ToList());
         }
 
-        // GET: Productoes/Details/5
+        // GET: Productos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace Libreria.Controllers
             return View(producto);
         }
 
-        // GET: Productoes/Create
+        // GET: Productos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Productoes/Create
+        // POST: Productos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace Libreria.Controllers
             return View(producto);
         }
 
-        // GET: Productoes/Edit/5
+        // GET: Productos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace Libreria.Controllers
             return View(producto);
         }
 
-        // POST: Productoes/Edit/5
+        // POST: Productos/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace Libreria.Controllers
             return View(producto);
         }
 
-        // GET: Productoes/Delete/5
+        // GET: Productos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace Libreria.Controllers
             return View(producto);
         }
 
-        // POST: Productoes/Delete/5
+        // POST: Productos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
