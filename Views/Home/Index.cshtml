@@ -1,33 +1,59 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Inicio";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+<main class="container py-5">
+    <section class="text-center mb-5">
+        <h1 id="title" class="display-5 fw-bold" style="color: #2c3e50;">Bienvenido a <span style="color: #3498db;">LibreMax</span></h1>
+        <p class="lead text-muted">Explora un mundo de historias, conocimiento e imaginación. Todo al alcance de un clic.</p>
+        <a href="/Productos" class="btn btn-primary btn-lg rounded-pill shadow-sm">Explorar Catálogo</a>
     </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
-    </div>
+
+    <!-- Sección de libros destacados -->
+    <section class="mb-5">
+        <h2 class="text-center fw-bold mb-4" style="color: #34495e;">Libros Destacados</h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4 text-center">
+                <div class="card shadow-sm border-0">
+                    <img src="/Content/Images/libro1.jpg" class="card-img-top rounded" alt="Libro destacado 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Título Destacado 1</h5>
+                        <p class="card-text text-muted">Un libro que te atrapará desde la primera página.</p>
+                        <a href="/Productos/Details/1" class="btn btn-outline-primary rounded-pill">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card shadow-sm border-0">
+                    <img src="/Content/Images/libro2.jpg" class="card-img-top rounded" alt="Libro destacado 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Título Destacado 2</h5>
+                        <p class="card-text text-muted">Un best-seller que no puedes dejar pasar.</p>
+                        <a href="/Productos/Details/2" class="btn btn-outline-primary rounded-pill">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card shadow-sm border-0">
+                    <img src="/Content/Images/libro3.jpg" class="card-img-top rounded" alt="Libro destacado 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título Destacado 3</h5>
+                        <p class="card-text text-muted">Explora este libro recomendado por críticos y lectores.</p>
+                        <a href="/Productos/Details/3" class="btn btn-outline-primary rounded-pill">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nueva Sección: Sobre Nosotros -->
+    <section class="text-center py-5" style="background-color: #f9f9f9; border-radius: 10px;">
+        <h2 class="fw-bold mb-4" style="color: #2c3e50;">Sobre Nosotros</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+            En <span style="color: #3498db; font-weight: bold;">LibreMax</span>, estamos comprometidos con conectar a lectores apasionados con las mejores historias. Desde novelas de ficción hasta libros educativos, nuestra misión es hacer que leer sea accesible y emocionante para todos.
+        </p>
+        <img src="/Content/Images/sobrenosotros.jpg" alt="Equipo de Librería Online" class="img-fluid rounded shadow-sm mt-4" style="max-width: 70%;">
+    </section>
 </main>
