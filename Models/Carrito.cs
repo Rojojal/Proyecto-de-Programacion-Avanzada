@@ -13,10 +13,6 @@ namespace Libreria.Models
         public int IdCarrito { get; set; }
 
         public int IdUsuario { get; set; }
-
-        public List<CarritoProducto> Items { get; set; }
-
-
         public virtual ICollection<CarritoProducto> Carritos { get; set; }
     }
 }

@@ -12,11 +12,11 @@ namespace Libreria.Models
         [Key]
         public int IdPedido { get; set; }
 
+        [Required]
         public string IdUsuario { get; set; }
 
+        [Required]
         public DateTime FechaPedido { get; set; }
-
-        public List<PedidosLista> Productos { get; set; }
 
         public virtual ICollection<PedidosLista> Pedidos { get; set; }
 

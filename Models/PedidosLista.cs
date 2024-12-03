@@ -10,12 +10,24 @@ namespace Libreria.Models
     {
         [Key]
         public int Id { get; set; }
-        public string IdProducto { get; set; } 
-        public string Nombre { get; set; } 
+
+        [Required]
+        public int IdProducto { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Nombre { get; set; }
+
+        [Required]
         public int Cantidad { get; set; }
+
+        [Required]
         public decimal Precio { get; set; }
+
         public decimal Subtotal => Cantidad * Precio;
 
+        [Required]
+        public int IdPedido { get; set; }
         public virtual Pedido Pedido { get; set; }
     }
 }

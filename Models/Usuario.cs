@@ -9,7 +9,7 @@ namespace Libreria.Models
     public class Usuario
     {
         [Key]
-        public string IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
 
         [Required]
         [StringLength(50)]

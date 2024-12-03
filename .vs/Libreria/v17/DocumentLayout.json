@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Extreme\\source\\repos\\Libreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\pedidoslista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\pedidoslista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\carritoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\carritoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 59,
+          "SelectedChildIndex": 58,
           "Children": [
             {
               "$type": "Bookmark",
@@ -254,54 +266,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAACgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T07:17:53.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADYAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T01:03:47.379Z",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:24:31.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "Controllers\\ProductoController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAYwGYAAAANAAAAAAAAAA==",
+              "Title": "Rese\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Rese\u00F1a.cs",
+              "RelativeDocumentMoniker": "Models\\Rese\u00F1a.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Rese\u00F1a.cs",
+              "RelativeToolTip": "Models\\Rese\u00F1a.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T00:49:33.954Z",
+              "WhenOpened": "2024-12-02T23:24:20.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-30T00:11:04.507Z",
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
+              "RelativeToolTip": "Models\\Producto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:24:05.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PedidosLista.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\PedidosLista.cs",
+              "RelativeDocumentMoniker": "Models\\PedidosLista.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\PedidosLista.cs",
+              "RelativeToolTip": "Models\\PedidosLista.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:23:56.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Pedido.cs",
+              "RelativeToolTip": "Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:23:43.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CarritoProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\CarritoProducto.cs",
+              "RelativeDocumentMoniker": "Models\\CarritoProducto.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\CarritoProducto.cs",
+              "RelativeToolTip": "Models\\CarritoProducto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:23:33.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Carrito.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Carrito.cs",
+              "RelativeDocumentMoniker": "Models\\Carrito.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Carrito.cs",
+              "RelativeToolTip": "Models\\Carrito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T23:23:06.431Z",
               "EditorCaption": ""
             }
           ]

@@ -19,15 +19,15 @@ namespace Libreria.Models
         public decimal Precio{ get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Disponibilidad { get; set; }
+        public bool Disponibilidad { get; set; }
         public string Reseñas { get; set; }
         public List<byte[]> Imagenes { get; set; }
 
         [Required]
+        [StringLength(10)]
         public string Estado { get; set; }
 
-        public List<Reseña> Reseña { get; set; }
+        public virtual ICollection<Reseña> Reseña { get; set; }
 
 
     }
