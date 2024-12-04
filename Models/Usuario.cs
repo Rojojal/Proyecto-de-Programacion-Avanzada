@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -20,8 +22,13 @@ namespace Libreria.Models
         public string Contraseña { get; set; } 
         public DateTime UltimaConexion { get; set; }
 
-        [Required]
-        public bool Estado { get; set; } 
+        [Required]  
+        public bool Estado { get; set; }
+
+        [ForeignKey("AspNetUser")]
+        public string AspNetUserId { get; set; }
+
+        public virtual ApplicationUser AspNetUser { get; set; }
 
     }
 }

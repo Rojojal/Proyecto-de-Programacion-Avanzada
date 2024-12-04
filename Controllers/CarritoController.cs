@@ -12,7 +12,7 @@ namespace Libreria.Controllers
 {
     public class CarritoController : Controller
     {
-        private LibreriaDbContext db = new LibreriaDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Carrito
         public ActionResult Index()

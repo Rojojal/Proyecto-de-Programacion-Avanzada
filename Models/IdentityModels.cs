@@ -29,5 +29,10 @@ namespace Libreria.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Carrito> Carritos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

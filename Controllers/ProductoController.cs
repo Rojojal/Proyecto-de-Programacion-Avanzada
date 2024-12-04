@@ -12,7 +12,7 @@ namespace Libreria.Controllers
 {
     public class ProductoController : Controller
     {
-        private LibreriaDbContext db = new LibreriaDbContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Productos
         public ActionResult Index()
