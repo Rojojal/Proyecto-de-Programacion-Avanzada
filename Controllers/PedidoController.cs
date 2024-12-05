@@ -10,6 +10,7 @@ using Libreria.Models;
 
 namespace Libreria.Controllers
 {
+    [Authorize(Roles = "User,Admin")]
     public class PedidoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

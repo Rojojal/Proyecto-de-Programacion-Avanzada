@@ -1,33 +1,55 @@
 ﻿@model IEnumerable<Libreria.Models.Carrito>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Mi Carrito";
 }
 
-<h2>Index</h2>
+<div class="container mt-4">
+    <h2 class="text-center">Tu carrito de compras.</h2>
+    <p class="text-center text-muted">Aquí puedes gestionar los productos que deseas comprar.</p>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.IdUsuario)
-        </th>
-        <th></th>
-    </tr>
+    <div class="text-right mb-3">
+        <a href="@Url.Action("Create", "Carrito")" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Añadir Producto
+        </a>
+    </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IdUsuario)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdCarrito }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdCarrito }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdCarrito })
-        </td>
-    </tr>
-}
-
-</table>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center" role="alert">
+            Tu carrito está vacío. ¡Añade productos para comenzar!
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="text-center">Usuario</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.IdUsuario)
+                        </td>
+                        <td class="text-center">
+                            <a href="@Url.Action("Edit", "Carrito", new { id = item.IdCarrito })" class="btn btn-warning btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a href="@Url.Action("Details", "Carrito", new { id = item.IdCarrito })" class="btn btn-info btn-sm">
+                                <i class="fas fa-info-circle"></i> Detalles
+                            </a>
+                            <a href="@Url.Action("Delete", "Carrito", new { id = item.IdCarrito })" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

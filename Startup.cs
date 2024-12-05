@@ -49,7 +49,7 @@ namespace Libreria
                     if (userCreationResult.Succeeded)
                     {
                         userManager.AddToRole(adminUser.Id, "Admin");
-                    }
+                    }   
                 }
             }
 

@@ -10,6 +10,7 @@ using Libreria.Models;
 
 namespace Libreria.Controllers
 {
+    
     public class CarritoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -20,6 +21,8 @@ namespace Libreria.Controllers
             return View(db.Carritos.ToList());
         }
 
+
+        [Authorize(Roles = "User,Admin")]
         // GET: Carrito/Details/5
         public ActionResult Details(int? id)
         {
@@ -35,6 +38,8 @@ namespace Libreria.Controllers
             return View(carrito);
         }
 
+
+        [Authorize(Roles = "User,Admin")]
         // GET: Carrito/Create
         public ActionResult Create()
         {
@@ -44,6 +49,8 @@ namespace Libreria.Controllers
         // POST: Carrito/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+
+        [Authorize(Roles = "User,Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdCarrito,IdUsuario")] Carrito carrito)
@@ -58,7 +65,10 @@ namespace Libreria.Controllers
             return View(carrito);
         }
 
+
+
         // GET: Carrito/Edit/5
+        [Authorize(Roles = "User,Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +86,8 @@ namespace Libreria.Controllers
         // POST: Carrito/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+
+        [Authorize(Roles = "User,Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "IdCarrito,IdUsuario")] Carrito carrito)
@@ -90,6 +102,7 @@ namespace Libreria.Controllers
         }
 
         // GET: Carrito/Delete/5
+        [Authorize(Roles = "User,Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -105,6 +118,7 @@ namespace Libreria.Controllers
         }
 
         // POST: Carrito/Delete/5
+        [Authorize(Roles = "User,Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

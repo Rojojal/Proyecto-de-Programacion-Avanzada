@@ -18,6 +18,11 @@ namespace Libreria.Controllers
             return View();
         }
 
+        public ActionResult Carrito()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

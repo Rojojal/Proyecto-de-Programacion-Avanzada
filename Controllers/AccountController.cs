@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Libreria.Models;
+using System.Data.Entity;
 
 namespace Libreria.Controllers
 {
@@ -79,6 +80,23 @@ namespace Libreria.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+
+                    // Instancia 
+                    using (var db = new ApplicationDbContext()) 
+                    {
+                        var user = await UserManager.FindByEmailAsync(model.Email);
+                        if (user != null) 
+                        {
+                            var usuario = db.Usuarios.FirstOrDefault(u => u.AspNetUserId == user.Id); 
+                            if (usuario != null) 
+                            {
+                                usuario.UltimaConexion = DateTime.Now; 
+                                db.Entry(usuario).State = EntityState.Modified; 
+                                await db.SaveChangesAsync(); 
+                            }
+                        }
+                    }
+
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -156,6 +174,20 @@ namespace Libreria.Controllers
 
                 if (result.Succeeded)
                 {
+                    var nuevoUsuario = new Usuario
+                    {
+                        NombreUsuario = model.Email, 
+                        Contraseña = UserManager.PasswordHasher.HashPassword(model.Password), 
+                        UltimaConexion = DateTime.Now,
+                        Estado = true, 
+                        AspNetUserId = user.Id 
+                    };
+
+                    using (var db = new ApplicationDbContext())
+                    {
+                        db.Usuarios.Add(nuevoUsuario);
+                        await db.SaveChangesAsync();
+                    }
 
                     await UserManager.AddToRoleAsync(user.Id, "User");
 

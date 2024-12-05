@@ -1,57 +1,55 @@
 ﻿@model IEnumerable<Libreria.Models.Producto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Catálogo de Productos";
 }
 
-<h2>Index</h2>
+<div class="container mt-5">
+    <h2 class="text-center">@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Precio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Disponibilidad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Reseñas)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estado)
-        </th>
-        <th></th>
-    </tr>
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="text-end mb-3">
+            <a href="@Url.Action("Create", "Producto")" class="btn btn-success">
+                <i class="fas fa-plus"></i> Añadir Producto
+            </a>
+        </div>
+    }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Precio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Disponibilidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Reseñas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProducto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProducto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProducto })
-        </td>
-    </tr>
-}
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <!-- <img src="" class="card-img-top" alt="Imagen de @item.Nombre" style="height: 200px; object-fit: cover;">  -->
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nombre</h5>
+                        <p class="card-text"><strong>Precio:</strong> $@item.Precio</p>
+                        <p class="card-text"><strong>Disponibilidad:</strong> @(item.Disponibilidad ? "Disponible" : "Agotado")</p>
+                        <p class="card-text"><strong>Reseñas:</strong> @item.Reseñas</p>
+                        <p class="card-text"><strong>Estado:</strong> @item.Estado</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("Details", "Producto", new { id = item.IdProducto })" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Ver Detalles
+                        </a>
 
-</table>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a href="@Url.Action("Edit", "Producto", new { id = item.IdProducto })" class="btn btn-warning">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a href="@Url.Action("Delete", "Producto", new { id = item.IdProducto })" class="btn btn-danger">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </a>
+                        }
+
+                        <a href="@Url.Action("AñadirAlCarrito", "Carrito", new { id = item.IdProducto })" class="btn btn-success">
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
