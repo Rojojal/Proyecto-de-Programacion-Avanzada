@@ -12,7 +12,7 @@ namespace Libreria.Models
         [Key]
         public int IdCarrito { get; set; }
 
-        public int IdUsuario { get; set; }
+        public String IdUsuario { get; set; }
         public virtual ICollection<CarritoProducto> Carritos { get; set; }
     }
 }

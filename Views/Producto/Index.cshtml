@@ -44,9 +44,15 @@
                             </a>
                         }
 
-                        <a href="@Url.Action("AñadirAlCarrito", "Carrito", new { id = item.IdProducto })" class="btn btn-success">
-                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
-                        </a>
+                        <div class="card-footer text-center">
+                            <form action="@Url.Action("AddToCart", "Carrito")" method="post">
+                                <input type="hidden" name="idProducto" value="@item.IdProducto" />
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                                </button>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>

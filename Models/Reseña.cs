@@ -20,6 +20,7 @@ namespace Libreria.Models
         [Required]
         public int Calificacion { get; set; }
 
+        [Required]
         public string Comentario { get; set; }
 
         [Required]

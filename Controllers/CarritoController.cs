@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Libreria.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Libreria.Controllers
 {
@@ -20,6 +21,54 @@ namespace Libreria.Controllers
         {
             return View(db.Carritos.ToList());
         }
+
+        // POST: Carrito/AddToCart
+        [Authorize(Roles = "User,Admin")]
+        [HttpPost]
+        public ActionResult AddToCart(int idProducto, int cantidad = 1)
+        {
+            var usuarioId = User.Identity.GetUserId(); // Obtener el ID del usuario actual
+
+            // Verificar si el carrito ya existe para el usuario
+            var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
+            if (carrito == null)
+            {
+                carrito = new Carrito { IdUsuario = usuarioId };
+                db.Carritos.Add(carrito);
+                db.SaveChanges();
+            }
+
+            // Verificar si el producto ya está en el carrito
+            var carritoProducto = db.CarritoProductos
+                .FirstOrDefault(cp => cp.IdCarrito == carrito.IdCarrito && cp.IdProducto == idProducto);
+
+            if (carritoProducto != null)
+            {
+                // Incrementar la cantidad si ya existe
+                carritoProducto.Cantidad += cantidad;
+            }
+            else
+            {
+                // Añadir el producto al carrito
+                var producto = db.Productos.Find(idProducto);
+                if (producto != null)
+                {
+                    carritoProducto = new CarritoProducto
+                    {
+                        IdCarrito = carrito.IdCarrito,
+                        IdProducto = producto.IdProducto,
+                        NombreProducto = producto.Nombre,
+                        Precio = producto.Precio,
+                        Cantidad = cantidad
+                    };
+                    db.CarritoProductos.Add(carritoProducto);
+                }
+            }
+
+            db.SaveChanges();
+            return RedirectToAction("Index", "Producto"); // Redirigir al catálogo después de añadir
+        }
+
 
 
         [Authorize(Roles = "User,Admin")]
