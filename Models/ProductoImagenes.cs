@@ -16,7 +16,7 @@ namespace Libreria.Models
         public int IdProducto { get; set; }
 
         [Required]
-        public byte[] Datos { get; set; }
+        public string ImageUrl { get; set; }
 
         public virtual Producto Producto { get; set; }
     }

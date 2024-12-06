@@ -22,8 +22,6 @@ namespace Libreria.Models
         public bool Disponibilidad { get; set; }
         public string Reseñas { get; set; }
 
-        public byte[] Imagen { get; set; }
-
         [Required]
         [StringLength(10)]
         public string Estado { get; set; }

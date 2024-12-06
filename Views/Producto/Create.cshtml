@@ -36,8 +36,8 @@
         @Html.HiddenFor(model => model.Estado, new { @Value = "Activo" })
 
         <div class="mb-3">
-            @Html.Label("Imágenes", new { @class = "form-label" })
-            <input type="file" name="Imagenes" class="form-control" multiple accept="image/*" />
+            @Html.Label("Subir Imagen", new { @class = "form-label" })
+            <input type="file" name="ImagenFiles" class="form-control" multiple accept="image/*" />
             <p class="help-block">Seleccione una o varias imágenes (JPG, PNG, GIF).</p>
         </div>
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,10 +48,39 @@ namespace Libreria.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto)
+        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
         {
             if (ModelState.IsValid)
             {
+                // Validar si hay imágenes
+                if (ImagenFiles != null && ImagenFiles.Any(f => f != null && f.ContentLength > 0))
+                {
+                    // Crear la lista de imágenes asociadas al producto
+                    var imagenes = new List<ProductoImagenes>();
+
+                    foreach (var file in ImagenFiles)
+                    {
+                        if (file != null && file.ContentLength > 0)
+                        {
+                            // Guardar cada imagen en una carpeta del servidor
+                            string nombreArchivo = Path.GetFileName(file.FileName);
+                            string ruta = Path.Combine(Server.MapPath("~/Imagenes"), nombreArchivo);
+                            file.SaveAs(ruta);
+                            var productoImagen = new ProductoImagenes
+                            {
+                                ImageUrl = "/Imagenes/" + nombreArchivo
+                            };
+
+                            // Crear un nuevo objeto ProductoImagenes y agregarlo a la lista
+                            imagenes.Add(productoImagen);
+                            db.ProductoImagenes.Add(productoImagen);
+                        }
+                    }
+
+                    // Asociar las imágenes al producto
+                    producto.Imagenes = imagenes;
+                }
+
                 db.Productos.Add(producto);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -58,6 +88,8 @@ namespace Libreria.Controllers
 
             return View(producto);
         }
+
+
 
         // GET: Productos/Edit/5
         public ActionResult Edit(int? id)
