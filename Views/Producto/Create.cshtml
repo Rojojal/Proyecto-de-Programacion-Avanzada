@@ -1,70 +1,54 @@
 ﻿@model Libreria.Models.Producto
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear Producto";
 }
 
-<h2>Create</h2>
+<h2>@ViewBag.Title</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Producto</h4>
+
+    <div class="container">
+        <h4>Ingrese los detalles del producto</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-            </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Nombre, new { @class = "form-label" })
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
-            </div>
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Precio, new { @class = "form-label" })
+            @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Disponibilidad, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.CheckBoxFor(model => model.Disponibilidad, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Disponibilidad, "", new { @class = "text-danger" })
-            </div>
+        <div class="mb-3">
+            @Html.LabelFor(model => model.Disponibilidad, new { @class = "form-label" })
+            @Html.CheckBoxFor(model => model.Disponibilidad, new { @class = "form-check-input" })
+            @Html.ValidationMessageFor(model => model.Disponibilidad, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Reseñas, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Reseñas, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Reseñas, "", new { @class = "text-danger" })
-            </div>
+        @Html.HiddenFor(model => model.Estado, new { @Value = "Activo" })
+
+        <div class="mb-3">
+            @Html.Label("Imágenes", new { @class = "form-label" })
+            <input type="file" name="Imagenes" class="form-control" multiple accept="image/*" />
+            <p class="help-block">Seleccione una o varias imágenes (JPG, PNG, GIF).</p>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+        <div class="mb-3 text-center">
+            <input type="submit" value="Crear Producto" class="btn btn-primary" />
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="mt-3">
+    @Html.ActionLink("Volver a la lista", "Index", new { @class = "btn btn-link" })
 </div>
 
 @section Scripts {

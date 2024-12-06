@@ -21,7 +21,8 @@ namespace Libreria.Models
         [Required]
         public bool Disponibilidad { get; set; }
         public string Reseñas { get; set; }
-        public List<byte[]> Imagenes { get; set; }
+
+        public byte[] Imagen { get; set; }
 
         [Required]
         [StringLength(10)]
@@ -29,6 +30,6 @@ namespace Libreria.Models
 
         public virtual ICollection<Reseña> Reseña { get; set; }
 
-
+        public virtual ICollection<ProductoImagenes> Imagenes { get; set; }
     }
 }
