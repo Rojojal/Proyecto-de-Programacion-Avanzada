@@ -1,22 +1,22 @@
 ﻿@model Libreria.Models.Producto
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Producto";
 }
 
-<h2>Edit</h2>
+<h2>Editar Producto</h2>
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Producto</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.IdProducto)
 
+       
         <div class="form-group">
             @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -25,6 +25,7 @@
             </div>
         </div>
 
+       
         <div class="form-group">
             @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -34,39 +35,57 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Disponibilidad, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Disponibilidad, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Disponibilidad, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Reseñas, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Reseñas, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Reseñas, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.CheckBoxFor(model => model.Estado, new { @class = "form-check-input" })
                 @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
             </div>
         </div>
 
+      
+        <div class="form-group">
+            @Html.LabelFor(model => model.Disponibilidad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(model => model.Disponibilidad, new { @class = "form-check-input" })
+                @Html.ValidationMessageFor(model => model.Disponibilidad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @if (Model.Imagenes != null && Model.Imagenes.Count > 0)
+        {
+            <div class="form-group">
+                <label class="control-label col-md-2">Imágenes Actuales</label>
+                <div class="col-md-10">
+                    @foreach (var image in Model.Imagenes)
+                    {
+                        <div class="mb-3">
+                            <img src="@image.ImageUrl" alt="Imagen del Producto" class="img-thumbnail" style="max-width: 150px;" />
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+        
+        <div class="form-group">
+            <label for="NuevasImagenes" class="control-label col-md-2">Nuevas Imágenes</label>
+            <div class="col-md-10">
+                <input type="file" id="NuevasImagenes" name="ImagenFiles" multiple class="form-control" />
+                <small class="text-muted">Puedes subir varias imágenes seleccionándolas todas a la vez.</small>
+            </div>
+        </div>
+
+      
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver a la Lista", "Index", null, new { @class = "btn btn-secondary" })
 </div>
 
 @section Scripts {

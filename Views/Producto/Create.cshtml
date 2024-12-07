@@ -33,7 +33,7 @@
             @Html.ValidationMessageFor(model => model.Disponibilidad, "", new { @class = "text-danger" })
         </div>
 
-        @Html.HiddenFor(model => model.Estado, new { @Value = "Activo" })
+        @Html.HiddenFor(model => model.Estado, new { @Value = true })
 
         <div class="mb-3">
             @Html.Label("Subir Imagen", new { @class = "form-label" })

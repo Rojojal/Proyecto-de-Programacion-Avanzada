@@ -30,6 +30,7 @@ namespace Libreria.Models
         [Required]
         public int IdCarrito { get; set; }
         public virtual Carrito Carrito { get; set; }
+        public virtual Producto Producto { get; set; }
 
 
 

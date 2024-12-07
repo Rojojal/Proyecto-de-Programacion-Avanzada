@@ -3,96 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Extreme\\source\\repos\\Libreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\migrations\\202412070157387_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:migrations\\202412070157387_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\producto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\producto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\producto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\productoimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\productoimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\migrations\\202412062011112_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:migrations\\202412062011112_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|c:\\users\\extreme\\source\\repos\\libreria\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\carrito\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\carrito\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\carrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\carritoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\carritoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|C:\\Users\\Extreme\\source\\repos\\Libreria\\models\\pedidoslista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F220E2-ECB8-459B-AA35-1A06693C3984}|Libreria.csproj|solutionrelative:models\\pedidoslista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 72,
+          "SelectedChildIndex": 56,
           "Children": [
             {
               "$type": "Bookmark",
@@ -330,262 +274,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "202412062011112_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Migrations\\202412062011112_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\202412062011112_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Migrations\\202412062011112_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\202412062011112_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T20:11:15.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PedidoController.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\PedidoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\PedidoController.cs",
-              "RelativeToolTip": "Controllers\\PedidoController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T19:34:10.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "Controllers\\ProductoController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAcwDIAAACsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T19:33:57.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductoImagenes.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\ProductoImagenes.cs",
-              "RelativeDocumentMoniker": "Models\\ProductoImagenes.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\ProductoImagenes.cs",
-              "RelativeToolTip": "Models\\ProductoImagenes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T08:20:27.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Carrito\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Carrito\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Carrito\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Carrito\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T07:53:31.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
-              "RelativeDocumentMoniker": "Models\\Producto.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
-              "RelativeToolTip": "Models\\Producto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T07:43:42.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Producto\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Create.cshtml",
-              "RelativeToolTip": "Views\\Producto\\Create.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T07:37:25.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAC0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T07:34:03.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Manage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Manage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Manage\\Index.cshtml",
-              "RelativeToolTip": "Views\\Manage\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T07:20:08.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T06:22:18.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T06:11:14.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvysAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T06:06:03.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T05:46:11.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Carrito\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Carrito\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Carrito\\Index.cshtml",
-              "RelativeToolTip": "Views\\Carrito\\Index.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwEYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T05:08:25.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Carrito.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Carrito.cs",
-              "RelativeDocumentMoniker": "Models\\Carrito.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Carrito.cs",
-              "RelativeToolTip": "Models\\Carrito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T22:36:25.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CarritoProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\CarritoProducto.cs",
-              "RelativeDocumentMoniker": "Models\\CarritoProducto.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\CarritoProducto.cs",
-              "RelativeToolTip": "Models\\CarritoProducto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T22:29:19.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Producto\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Index.cshtml",
-              "RelativeToolTip": "Views\\Producto\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T22:28:14.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PedidosLista.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\PedidosLista.cs",
-              "RelativeDocumentMoniker": "Models\\PedidosLista.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\PedidosLista.cs",
-              "RelativeToolTip": "Models\\PedidosLista.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Title": "202412070157387_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Migrations\\202412070157387_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\202412070157387_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Migrations\\202412070157387_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\202412070157387_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T23:23:56.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T07:28:01.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Startup.cs",
-              "RelativeDocumentMoniker": "Startup.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Startup.cs",
-              "RelativeToolTip": "Startup.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAgwC0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:39:26.74Z",
+              "WhenOpened": "2024-12-07T01:57:44.223Z",
               "EditorCaption": ""
             },
             {
@@ -596,9 +293,87 @@
               "RelativeDocumentMoniker": "Controllers\\CarritoController.cs",
               "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\CarritoController.cs",
               "RelativeToolTip": "Controllers\\CarritoController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAuwOYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T22:22:19.332Z",
+              "WhenOpened": "2024-12-07T01:50:42.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Producto\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Create.cshtml",
+              "RelativeToolTip": "Views\\Producto\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwCwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T01:20:32.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Producto.cs",
+              "RelativeToolTip": "Models\\Producto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwBgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T01:16:40.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAA7wJQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T19:33:57.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Producto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Producto\\Index.cshtml",
+              "RelativeToolTip": "Views\\Producto\\Index.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwB8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T01:11:57.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T07:28:01.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwC0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T22:39:26.74Z",
               "EditorCaption": ""
             },
             {
@@ -612,19 +387,6 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAswCgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T22:12:26.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Rese\u00F1a.cs",
-              "DocumentMoniker": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Rese\u00F1a.cs",
-              "RelativeDocumentMoniker": "Models\\Rese\u00F1a.cs",
-              "ToolTip": "C:\\Users\\Extreme\\source\\repos\\Libreria\\Models\\Rese\u00F1a.cs",
-              "RelativeToolTip": "Models\\Rese\u00F1a.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T23:24:20.712Z",
               "EditorCaption": ""
             }
           ]

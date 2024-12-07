@@ -23,8 +23,7 @@ namespace Libreria.Models
         public string Reseñas { get; set; }
 
         [Required]
-        [StringLength(10)]
-        public string Estado { get; set; }
+        public bool Estado { get; set; }
 
         public virtual ICollection<Reseña> Reseña { get; set; }
 

@@ -52,17 +52,17 @@ namespace Libreria.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Validar si hay imágenes
+                // Valida si hay imagenes
                 if (ImagenFiles != null && ImagenFiles.Any(f => f != null && f.ContentLength > 0))
                 {
-                    // Crear la lista de imágenes asociadas al producto
+                    // Crea una lista de imagenes asociadas para el producto
                     var imagenes = new List<ProductoImagenes>();
 
                     foreach (var file in ImagenFiles)
                     {
                         if (file != null && file.ContentLength > 0)
                         {
-                            // Guardar cada imagen en una carpeta del servidor
+                            // Guarda cada imagen en una carpeta del servidor
                             string nombreArchivo = Path.GetFileName(file.FileName);
                             string ruta = Path.Combine(Server.MapPath("~/Imagenes"), nombreArchivo);
                             file.SaveAs(ruta);
@@ -71,13 +71,13 @@ namespace Libreria.Controllers
                                 ImageUrl = "/Imagenes/" + nombreArchivo
                             };
 
-                            // Crear un nuevo objeto ProductoImagenes y agregarlo a la lista
+                            // Crea un nuevo objeto ProductoImagenes y lo agrega a la lista
                             imagenes.Add(productoImagen);
                             db.ProductoImagenes.Add(productoImagen);
                         }
                     }
 
-                    // Asociar las imágenes al producto
+                    // Asocia las imagenes con el producto
                     producto.Imagenes = imagenes;
                 }
 

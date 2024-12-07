@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Libreria.Controllers
 {
-    
+
     public class CarritoController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -19,24 +19,19 @@ namespace Libreria.Controllers
         // GET: Carrito
         public ActionResult Index()
         {
-            // Saca la ID del usuario actual
-            var usuarioId = User.Identity.GetUserId();
-            var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
+            // Llama el método para obtener el carrito, si no existe crea uno
+            var carrito = ObtenerCarrito();
 
-            if (carrito == null)
-            {
-                // Redirigir para crear un carrito si no existe
-                return RedirectToAction("Create"); 
-            }
-
+            // Obtiene los productos en el carrito, si los hay
             var productosEnCarrito = db.CarritoProductos.Where(cp => cp.IdCarrito == carrito.IdCarrito).ToList();
+
             return View(productosEnCarrito);
         }
 
         // Método para añadir productos al carrito
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
-        public ActionResult AgregarAlCarrito(int idProducto, int cantidad)
+        public ActionResult AgregarProductoCarrito(int idProducto, int cantidad)
         {
             // Llama el método para verificar si el carrito es el correcto
             var carrito = ObtenerCarrito();
@@ -74,7 +69,7 @@ namespace Libreria.Controllers
         private Carrito ObtenerCarrito()
         {
             // Saca la ID del usuario con la sesion activa
-            string usuarioId = User.Identity.GetUserId(); 
+            string usuarioId = User.Identity.GetUserId();
 
             // Busca el carrito del usuario actual
             var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
@@ -93,6 +88,26 @@ namespace Libreria.Controllers
             return carrito;
         }
 
+        // Elimina el producto el carrito (Experimental)
+        [Authorize(Roles = "User,Admin")]
+        [HttpPost]
+        public ActionResult EliminarProductoCarrito(int idProducto)
+        {
+            var usuarioId = User.Identity.GetUserId();
+            var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
+
+            if (carrito != null)
+            {
+                var carritoProducto = db.CarritoProductos.FirstOrDefault(cp => cp.IdCarrito == carrito.IdCarrito && cp.IdProducto == idProducto);
+                if (carritoProducto != null)
+                {
+                    db.CarritoProductos.Remove(carritoProducto);
+                    db.SaveChanges();
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
 
 
         [Authorize(Roles = "User,Admin")]
