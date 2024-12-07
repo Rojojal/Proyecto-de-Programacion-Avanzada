@@ -111,11 +111,36 @@ namespace Libreria.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto)
+        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
         {
             if (ModelState.IsValid)
             {
+                // Actualiza lo demás del producto
                 db.Entry(producto).State = EntityState.Modified;
+
+                // Valida si hay nuevas imágenes para agregar
+                if (ImagenFiles != null && ImagenFiles.Any(f => f != null && f.ContentLength > 0))
+                {
+                    foreach (var file in ImagenFiles)
+                    {
+                        if (file != null && file.ContentLength > 0)
+                        {
+                            // Guardar la nueva imagen en la carpeta /imagenes
+                            string nombreArchivo = Path.GetFileName(file.FileName);
+                            string ruta = Path.Combine(Server.MapPath("~/Imagenes"), nombreArchivo);
+                            file.SaveAs(ruta);
+
+                            // Crear un nuevo objeto de imagen y lo asocia con el proyecto
+                            var productoImagen = new ProductoImagenes
+                            {
+                                ImageUrl = "/Imagenes/" + nombreArchivo,
+                                IdProducto = producto.IdProducto // Relaciona la imagen cn el producto
+                            };
+
+                            db.ProductoImagenes.Add(productoImagen);
+                        }
+                    }
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -143,8 +168,15 @@ namespace Libreria.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Producto producto = db.Productos.Find(id);
-            db.Productos.Remove(producto);
-            db.SaveChanges();
+            if (producto != null)
+            {
+               
+                producto.Estado = false;
+
+                // Marca la entidad como modificada para guardar el cambio
+                db.Entry(producto).State = EntityState.Modified;
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 

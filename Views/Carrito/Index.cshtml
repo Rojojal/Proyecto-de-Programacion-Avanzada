@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col text-center">
-            <h2 class="display-6">Tu carrito de compras</h2>
+            <h2 class="display-6">Mi carrito de compras</h2>
             <p class="text-muted">Revisa y gestiona los productos que deseas comprar.</p>
         </div>
     </div>
@@ -39,8 +39,8 @@
                             <tr class="text-center">
                                 <td>@item.NombreProducto</td>
                                 <td>@item.Cantidad</td>
-                                <td>@item.Precio:C</td>
-                                <td>@item.Subtotal:C</td>
+                                <td>$@item.Precio</td>
+                                <td>$@item.Subtotal</td>
                                 <td>
                                     <a href="@Url.Action("Edit", "Carrito", new { id = item.Id })"
                                        class="btn btn-warning btn-sm me-1" title="Editar">
@@ -58,7 +58,7 @@
                         <tr class="table-light">
                             <td colspan="3" class="text-end fw-bold">Total:</td>
                             <td class="text-center fw-bold">
-                                @Model.Sum(item => item.Subtotal):C
+                               $@Model.Sum(item => item.Subtotal)
                             </td>
                             <td></td>
                         </tr>

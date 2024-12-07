@@ -11,7 +11,7 @@
             @if (Model.Imagenes != null && Model.Imagenes.Count > 0)
             {
                 <div class="mb-3">
-                    <img src="@Model.Imagenes.First().ImageUrl" class="img-fluid rounded shadow" alt="Imagen principal del producto">
+                    <img src="@Model.Imagenes.First().ImageUrl" class="img-fluid rounded shadow" alt="Imagen principal del producto" style="max-width: 80%; height: auto;">
                 </div>
             }
         </div>
@@ -44,13 +44,12 @@
             <h4>Otras Imágenes</h4>
             @foreach (var image in Model.Imagenes.Skip(1))
             {
-                <div class="col-md-3 mb-2">
-                    <img src="@image.ImageUrl" class="img-thumbnail w-50" alt="Imagen adicional">
+                <div class="col-md-4 mb-2">
+                    <img src="@image.ImageUrl" class="img-fluid" alt="Imagen adicional" style="max-width: 70%; height: auto;">
                 </div>
             }
         </div>
     }
-
 
     <!-- Reseñas del producto -->
     <div class="mt-4">
@@ -64,7 +63,7 @@
                 <strong>Usuario2</strong> (02/12/2024)
                 <p>Buen producto, pero el envío tardó un poco más de lo esperado. Aun así, muy satisfecho con la compra.</p>
             </li>
-            <!-- Agrega más reseñas según sea necesario -->
+           
         </ul>
         <p class="mt-2">No hay más reseñas disponibles.</p>
     </div>
