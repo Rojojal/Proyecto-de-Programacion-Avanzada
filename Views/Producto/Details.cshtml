@@ -1,4 +1,6 @@
 ﻿@model Libreria.Models.Producto
+    @using Microsoft.AspNet.Identity
+
 
 @{
     ViewBag.Title = "Detalles del Producto";
@@ -50,25 +52,66 @@
         </div>
     }
 
-    <!-- Reseñas del producto -->
+    
     <div class="mt-4">
         <h4>Reseñas</h4>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <strong>Usuario1</strong> (01/12/2024)
-                <p>¡Me encanta este producto! La calidad es excelente y cumplió con todas mis expectativas.</p>
-            </li>
-            <li class="list-group-item">
-                <strong>Usuario2</strong> (02/12/2024)
-                <p>Buen producto, pero el envío tardó un poco más de lo esperado. Aun así, muy satisfecho con la compra.</p>
-            </li>
+        @if (Model.Reseña != null && Model.Reseña.Any())
+        {
+            <ul class="list-group">
+                @foreach (var reseña in Model.Reseña.OrderByDescending(r => r.Fecha))
+                {
+                    <li class="list-group-item">
+                        <strong>@reseña.Usuario.NombreUsuario</strong> (@reseña.Fecha.ToString("dd/MM/yyyy"))
+                        <p>Calificación: @reseña.Calificacion / 5</p>
+                        <p>@reseña.Comentario</p>
 
-        </ul>
-        <p class="mt-2">No hay más reseñas disponibles.</p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            // Obtiene la ID de la tabla AspNetUsers
+                            string usuarioIdAspNet = User.Identity.GetUserId();
+
+                            // Luego busca la ID directamente desde el DBContext de usuarios ya que
+                            // esta tiene una referencia a la tabla AspNetUsers luego se usa una expresion labmda para 
+                            // coincidir con el AspNetUsers q hace referencia en la tabla de Usuarios y ya se manda al if para mostrar los botones
+                            var usuarioActual = new Libreria.Models.ApplicationDbContext().Usuarios.FirstOrDefault(u => u.AspNetUserId == usuarioIdAspNet);
+
+                            if (usuarioActual != null && (reseña.IdUsuario == usuarioActual.IdUsuario || User.IsInRole("Admin")))
+                            {
+                                <div class="mt-2">
+                                    <a href="@Url.Action("Edit", "Reseña", new { idProducto = Model.IdProducto, id = reseña.IdReseña })" class="btn btn-warning btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                    <a href="@Url.Action("Delete", "Reseña", new { idProducto = Model.IdProducto, id = reseña.IdReseña })" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que quieres eliminar esta reseña?');">
+                                        <i class="fas fa-trash"></i> Eliminar
+                                    </a>
+                                </div>
+                            }
+                        }
+
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No existen reseñas de este producto</p>
+        }
+
+        <!-- Botón para agregar reseña -->
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a href="@Url.Action("Create", "Reseña", new { idProducto = Model.IdProducto })" class="btn btn-success mt-3">
+                <i class="fas fa-pen"></i> Escribir Reseña
+            </a>
+        }
+        else
+        {
+            <p class="mt-2">Inicia sesión para escribir una reseña.</p>
+        }
     </div>
 
     <div class="mt-4">
-        @Html.ActionLink("Volver al catálogo", "Index", null, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Volver al catálogo", "Index", null, new { @class = "btn btn-dark" })
     </div>
 
     @if (User.IsInRole("Admin"))

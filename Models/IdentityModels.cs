@@ -37,5 +37,6 @@ namespace Libreria.Models
         public DbSet<CarritoProducto> CarritoProductos { get; set; }
         public DbSet<ProductoImagenes> ProductoImagenes { get; set; }
 
+        public System.Data.Entity.DbSet<Libreria.Models.Reseña> Reseña { get; set; }
     }
 }

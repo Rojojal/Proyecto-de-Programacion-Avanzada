@@ -1,0 +1,34 @@
+﻿@model Libreria.Models.Reseña
+
+@{
+    ViewBag.Title = "Agregar Reseña";
+}
+
+<div class="container mt-4">
+    <h3>Agregar Reseña para: @ViewBag.ProductoNombre</h3>
+    <hr />
+
+    @using (Html.BeginForm("Create", "Reseña", new { idProducto = ViewBag.IdProducto }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Calificacion, "Calificación")
+            <select name="Calificacion" class="form-control">
+                <option value="1">1 - Muy mala</option>
+                <option value="2">2 - Mala</option>
+                <option value="3">3 - Regular</option>
+                <option value="4">4 - Buena</option>
+                <option value="5">5 - Excelente</option>
+            </select>
+            @Html.ValidationMessageFor(model => model.Calificacion, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Comentario, "Comentario")
+            @Html.TextAreaFor(model => model.Comentario, new { @class = "form-control", rows = 4 })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+    }
+</div>

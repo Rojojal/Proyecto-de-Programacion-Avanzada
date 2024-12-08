@@ -1,0 +1,54 @@
+﻿@model Libreria.Models.Reseña
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Reseña</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IdReseña)
+        @Html.HiddenFor(model => model.IdUsuario)
+        @Html.HiddenFor(model => model.Fecha)
+        @Html.HiddenFor(model => model.IdProducto)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Calificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="Calificacion" class="form-control">
+                    <option value="1" @(Model.Calificacion == 1 ? "selected" : "")>1 - Muy mala</option>
+                    <option value="2" @(Model.Calificacion == 2 ? "selected" : "")>2 - Mala</option>
+                    <option value="3" @(Model.Calificacion == 3 ? "selected" : "")>3 - Regular</option>
+                    <option value="4" @(Model.Calificacion == 4 ? "selected" : "")>4 - Buena</option>
+                    <option value="5" @(Model.Calificacion == 5 ? "selected" : "")>5 - Excelente</option>
+                </select>
+                @Html.ValidationMessageFor(model => model.Calificacion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Comentario, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Comentario, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Comentario, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="text-center">
+    @Html.ActionLink("Volver al producto", "Details", "Producto", new { id = Model.IdProducto }, new { @class = "btn btn-dark" })
+</div>
