@@ -1,41 +1,60 @@
-﻿@model Libreria.Models.Carrito
+﻿@model IEnumerable<Libreria.Models.CarritoProducto>
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Carrito";
 }
 
-<h2>Edit</h2>
+<h2>Editar Carrito</h2>
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Carrito", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Carrito</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.IdCarrito)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IdUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.IdUsuario, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.IdUsuario, "", new { @class = "text-danger" })
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered table-hover align-middle">
+                    <thead class="table-dark text-center">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="text-center">
+                                <td>@item.NombreProducto</td>
+                                <td>
+                                    @Html.HiddenFor(modelItem => item.Id)
+                                    @Html.EditorFor(modelItem => item.Cantidad, new { htmlAttributes = new { @class = "form-control", style = "width: 60px;" } })
+                                    @Html.ValidationMessageFor(modelItem => item.Cantidad, "", new { @class = "text-danger" })
+                                </td>
+                                <td>$@item.Precio</td>
+                                <td>$@item.Subtotal</td>
+                                <td>
+                                    <button type="submit" class="btn btn-warning btn-sm" title="Actualizar cantidad">
+                                        <i class="fas fa-save"></i> Guardar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="@Url.Action("Index", "Carrito")" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </a>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

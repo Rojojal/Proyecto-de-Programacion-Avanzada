@@ -48,7 +48,7 @@ namespace Libreria.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
+        public ActionResult Create([Bind(Include = "IdProducto,Nombre,Precio,Descripcion,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,7 @@ namespace Libreria.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
+        public ActionResult Edit([Bind(Include = "IdProducto,Nombre,Precio,Descripcion,Disponibilidad,Reseñas,Estado")] Producto producto, IEnumerable<HttpPostedFileBase> ImagenFiles)
         {
             if (ModelState.IsValid)
             {

@@ -88,7 +88,7 @@ namespace Libreria.Controllers
             return carrito;
         }
 
-        // Elimina el producto el carrito (Experimental)
+        // Elimina el producto el carrito 
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
         public ActionResult EliminarProductoCarrito(int idProducto)
@@ -98,9 +98,11 @@ namespace Libreria.Controllers
 
             if (carrito != null)
             {
+                // Buscar el producto específico en el carrito
                 var carritoProducto = db.CarritoProductos.FirstOrDefault(cp => cp.IdCarrito == carrito.IdCarrito && cp.IdProducto == idProducto);
                 if (carritoProducto != null)
                 {
+                    // Eliminar el producto del carrito
                     db.CarritoProductos.Remove(carritoProducto);
                     db.SaveChanges();
                 }
@@ -108,6 +110,8 @@ namespace Libreria.Controllers
 
             return RedirectToAction("Index");
         }
+
+
 
 
         [Authorize(Roles = "User,Admin")]
@@ -163,12 +167,15 @@ namespace Libreria.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Carrito carrito = db.Carritos.Find(id);
+
+            Carrito carrito = db.Carritos.Include(c => c.Carritos).FirstOrDefault(c => c.IdCarrito == id);
             if (carrito == null)
             {
                 return HttpNotFound();
             }
-            return View(carrito);
+
+            // Pasa la lista de CarritoProducto a la vista
+            return View(carrito.Carritos.ToList());
         }
 
         // POST: Carrito/Edit/5
@@ -178,16 +185,27 @@ namespace Libreria.Controllers
         [Authorize(Roles = "User,Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdCarrito,IdUsuario")] Carrito carrito)
+        public ActionResult Edit(IEnumerable<CarritoProducto> productos)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(carrito).State = EntityState.Modified;
+                foreach (var item in productos)
+                {
+                    var carritoProducto = db.CarritoProductos.Find(item.Id);
+                    if (carritoProducto != null)
+                    {
+                        carritoProducto.Cantidad = item.Cantidad;
+                        db.Entry(carritoProducto).State = EntityState.Modified;
+                    }
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(carrito);
+            return View(productos);
         }
+
+
+
 
         // GET: Carrito/Delete/5
         [Authorize(Roles = "User,Admin")]

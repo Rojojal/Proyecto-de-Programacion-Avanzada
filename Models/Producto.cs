@@ -12,11 +12,15 @@ namespace Libreria.Models
         public int IdProducto { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(75)]
         public string Nombre { get; set; }
 
         [Required]
         public decimal Precio{ get; set; }
+
+        [Required]
+        [StringLength(2000)]
+        public string Descripcion { get; set; }
 
         [Required]
         public bool Disponibilidad { get; set; }

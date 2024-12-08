@@ -19,10 +19,9 @@
             <h2 class="mb-3">@Html.DisplayFor(model => model.Nombre)</h2>
             <h3 class="text-danger mb-3"> $@Html.DisplayFor(model => model.Precio)</h3>
 
-            <!-- Descripción del producto -->
             <div class="mt-4">
                 <h4>Descripción</h4>
-                <p>Este es un ejemplo de descripción detallada del producto, que proporciona información clave sobre sus características, ventajas y posibles usos. Puedes extender esta sección con más detalles específicos según el producto.</p>
+                <p>@Html.DisplayFor(model => model.Descripcion)</p>
             </div>
 
             <div class="mt-4">
@@ -63,7 +62,7 @@
                 <strong>Usuario2</strong> (02/12/2024)
                 <p>Buen producto, pero el envío tardó un poco más de lo esperado. Aun así, muy satisfecho con la compra.</p>
             </li>
-           
+
         </ul>
         <p class="mt-2">No hay más reseñas disponibles.</p>
     </div>

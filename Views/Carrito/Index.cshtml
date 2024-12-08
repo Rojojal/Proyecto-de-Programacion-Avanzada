@@ -46,10 +46,17 @@
                                        class="btn btn-warning btn-sm me-1" title="Editar">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="@Url.Action("EliminarProductoCarrito", "Carrito", new { id = item.Id })"
-                                       class="btn btn-danger btn-sm" title="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este producto del carrito?');">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
+
+
+                                    <form action="@Url.Action("EliminarProductoCarrito", "Carrito")" method="post" class="mt-1">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="idProducto" value="@item.IdProducto" />
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este producto del carrito?');">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+
+
                                 </td>
                             </tr>
                         }
