@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,6 +17,8 @@ namespace Libreria.Models
             // Agregar reclamaciones de usuario personalizadas aquí
             return userIdentity;
         }
+
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -24,7 +27,7 @@ namespace Libreria.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
+        
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -37,6 +40,8 @@ namespace Libreria.Models
         public DbSet<CarritoProducto> CarritoProductos { get; set; }
         public DbSet<ProductoImagenes> ProductoImagenes { get; set; }
 
-        public System.Data.Entity.DbSet<Libreria.Models.Reseña> Reseña { get; set; }
+        public DbSet<PedidosLista> PedidosLista { get; set; }
+
+        public DbSet<Reseña> Reseña { get; set; }
     }
 }

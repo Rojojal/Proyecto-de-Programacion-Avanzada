@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Libreria.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Libreria.Controllers
 {
@@ -18,8 +19,67 @@ namespace Libreria.Controllers
         // GET: Pedidos
         public ActionResult Index()
         {
-            return View(db.Pedidos.ToList());
+            
+            var userId = User.Identity.GetUserId(); //Obtiene la id del usuario actual
+
+            // Filtra los pedidos para la id del usuario actual
+            var pedidos = db.Pedidos
+                            .Where(p => p.IdUsuario == userId) 
+                            .Include(p => p.Pedidos) 
+                            .ToList();
+
+            return View(pedidos);
         }
+
+
+        [Authorize(Roles = "User,Admin")]
+        [HttpPost]
+        public ActionResult FinalizarCompra()
+        {
+            var usuarioId = User.Identity.GetUserId();
+            var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
+
+            if (carrito == null)
+            {
+                // Manejar si no hay carrito
+                TempData["Error"] = "No tienes productos en el carrito.";
+                return RedirectToAction("Index");
+            }
+
+            var productosEnCarrito = db.CarritoProductos.Where(cp => cp.IdCarrito == carrito.IdCarrito).ToList();
+
+            // Crea un nuevo pedido
+            var pedido = new Pedido
+            {
+                IdUsuario = usuarioId,
+                FechaPedido = DateTime.Now
+            };
+            db.Pedidos.Add(pedido);
+            db.SaveChanges();
+
+            // Transferir productos del carrito a PedidosLista
+            foreach (var producto in productosEnCarrito)
+            {
+                var pedidoDetalle = new PedidosLista
+                {
+                    IdPedido = pedido.IdPedido,
+                    IdProducto = producto.IdProducto,
+                    Nombre = producto.NombreProducto,
+                    Cantidad = producto.Cantidad,
+                    Precio = producto.Precio
+                };
+
+                db.PedidosLista.Add(pedidoDetalle);
+                db.CarritoProductos.Remove(producto); // Elimina el producto del carrito
+            }
+
+            db.SaveChanges();
+
+            TempData["Success"] = "Compra realizada exitosamente.";
+            return RedirectToAction("Index", "Pedido");
+        }
+
+
 
         // GET: Pedidos/Details/5
         public ActionResult Details(int? id)

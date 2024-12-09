@@ -74,29 +74,35 @@ namespace Libreria.Controllers
                 return View(model);
             }
 
-            // No cuenta los errores de inicio de sesión para el bloqueo de la cuenta
-            // Para permitir que los errores de contraseña desencadenen el bloqueo de la cuenta, cambie a shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            // Usa el correo electrónico directamente para buscar al usuario
+            var user = await UserManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Intento de inicio de sesión no válido.");
+                return View(model);
+            }
+
+            // Verifica la contraseña del usuario encontrado
+            var result = await SignInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, shouldLockout: false);
+
             switch (result)
             {
                 case SignInStatus.Success:
-
                     // Instancia 
-                    using (var db = new ApplicationDbContext()) 
+                    using (var db = new ApplicationDbContext())
                     {
-                        var user = await UserManager.FindByEmailAsync(model.Email);
-                        if (user != null) 
+                        var user1 = await UserManager.FindByEmailAsync(model.Email);
+                        if (user1 != null)
                         {
-                            var usuario = db.Usuarios.FirstOrDefault(u => u.AspNetUserId == user.Id); 
-                            if (usuario != null) 
+                            var usuario = db.Usuarios.FirstOrDefault(u => u.AspNetUserId == user1.Id);
+                            if (usuario != null)
                             {
-                                usuario.UltimaConexion = DateTime.Now; 
-                                db.Entry(usuario).State = EntityState.Modified; 
-                                await db.SaveChangesAsync(); 
+                                usuario.UltimaConexion = DateTime.Now;
+                                db.Entry(usuario).State = EntityState.Modified;
+                                await db.SaveChangesAsync();
                             }
                         }
                     }
-
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -169,14 +175,14 @@ namespace Libreria.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.NombreUsuario, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
                     var nuevoUsuario = new Usuario
                     {
-                        NombreUsuario = model.Email, 
+                        NombreUsuario = model.NombreUsuario, 
                         Contraseña = UserManager.PasswordHasher.HashPassword(model.Password), 
                         UltimaConexion = DateTime.Now,
                         Estado = true, 

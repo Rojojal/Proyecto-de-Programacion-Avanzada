@@ -39,7 +39,7 @@ namespace Libreria
                 {
                     var adminUser = new ApplicationUser
                     {
-                        UserName = "admin@domain.com",
+                        UserName = "admin",
                         Email = "admin@domain.com"
                     };
 

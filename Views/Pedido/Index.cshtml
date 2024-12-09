@@ -1,39 +1,53 @@
 ﻿@model IEnumerable<Libreria.Models.Pedido>
 
-@{
-    ViewBag.Title = "Index";
-}
+<h2>Historial de Pedidos</h2>
 
-<h2>Index</h2>
+<div class="container">
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center">
+            No tienes pedidos en tu historial.
+        </div>
+    }
+    else
+    {
+        foreach (var pedido in Model)
+        {
+            <div class="card mb-4">
+                <div class="card-header">
+                    <p class="text-muted">Fecha: @pedido.FechaPedido.ToShortDateString()</p>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var detalle in pedido.Pedidos)
+                            {
+                                <tr>
+                                    <td>@detalle.Nombre</td>
+                                    <td>@detalle.Cantidad</td>
+                                    <td>$@detalle.Precio</td>
+                                    <td>$@detalle.Subtotal</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    }
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "Manage")" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Volver a tu perfil
+        </a>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.IdUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaPedido)
-        </th>
-        <th></th>
-    </tr>
+</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IdUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaPedido)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido })
-        </td>
-    </tr>
-}
-
-</table>

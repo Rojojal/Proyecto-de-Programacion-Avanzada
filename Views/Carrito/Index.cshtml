@@ -78,9 +78,12 @@
                 <a href="@Url.Action("Index", "Producto")" class="btn btn-primary me-2">
                     <i class="fas fa-arrow-left"></i> Seguir añadiendo productos
                 </a>
-                <a href="@Url.Action("FinalizarCompra", "Carrito")" class="btn btn-success">
-                    <i class="fas fa-check"></i> Finalizar Compra
-                </a>
+                <form action="@Url.Action("FinalizarCompra", "Pedido")" method="post">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-check"></i> Finalizar Compra
+                    </button>
+                </form>
             </div>
         </div>
     }

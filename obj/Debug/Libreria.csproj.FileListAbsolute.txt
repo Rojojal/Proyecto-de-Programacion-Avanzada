@@ -1,5 +1,3 @@
-C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.csproj.AssemblyReference.cache
-C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache
 C:\Users\Extreme\source\repos\Libreria\bin\Libreria.dll.config
 C:\Users\Extreme\source\repos\Libreria\bin\Libreria.dll
 C:\Users\Extreme\source\repos\Libreria\bin\Libreria.pdb
@@ -95,6 +93,8 @@ C:\Users\Extreme\source\repos\Libreria\bin\es\System.Web.Optimization.resources.
 C:\Users\Extreme\source\repos\Libreria\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\Extreme\source\repos\Libreria\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\Extreme\source\repos\Libreria\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.csproj.AssemblyReference.cache
+C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache
 C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.csproj.Up2Date
 C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.dll
 C:\Users\Extreme\source\repos\Libreria\obj\Debug\Libreria.pdb
