@@ -39,13 +39,6 @@ namespace Libreria.Controllers
             var usuarioId = User.Identity.GetUserId();
             var carrito = db.Carritos.FirstOrDefault(c => c.IdUsuario == usuarioId);
 
-            if (carrito == null)
-            {
-                // Manejar si no hay carrito
-                TempData["Error"] = "No tienes productos en el carrito.";
-                return RedirectToAction("Index");
-            }
-
             var productosEnCarrito = db.CarritoProductos.Where(cp => cp.IdCarrito == carrito.IdCarrito).ToList();
 
             // Crea un nuevo pedido
@@ -57,7 +50,7 @@ namespace Libreria.Controllers
             db.Pedidos.Add(pedido);
             db.SaveChanges();
 
-            // Transferir productos del carrito a PedidosLista
+            // Transfiere productos del carrito a PedidosLista
             foreach (var producto in productosEnCarrito)
             {
                 var pedidoDetalle = new PedidosLista
@@ -74,8 +67,6 @@ namespace Libreria.Controllers
             }
 
             db.SaveChanges();
-
-            TempData["Success"] = "Compra realizada exitosamente.";
             return RedirectToAction("Index", "Pedido");
         }
 

@@ -17,5 +17,33 @@ namespace Libreria
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_Error()
+        {
+            Exception exception = Server.GetLastError();
+            Response.Clear();
+
+            HttpException httpException = exception as HttpException;
+
+            RouteData routeData = new RouteData();
+            routeData.Values.Add("controller", "Error");
+
+            if (httpException == null)
+            {
+                routeData.Values.Add("action", "ServerError");
+            }
+            else
+            {
+                switch (httpException.GetHttpCode())
+                {
+                    case 404:
+                        routeData.Values.Add("action", "PageNotFound");
+                        break;
+                    default:
+                        routeData.Values.Add("action", "ServerError");
+                        break;
+                }
+            }
+        }
     }
 }

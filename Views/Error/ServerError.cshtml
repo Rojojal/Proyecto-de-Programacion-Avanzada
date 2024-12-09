@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Error Interno del Servidor";
+}
+
+<div class="container text-center py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body">
+                    <h2 class="display-4 text-danger">¡Oops! Ha ocurrido un error.</h2>
+                    <p class="lead">Hubo un problema al procesar tu solicitud. Por favor, inténtalo más tarde.</p>
+                    <hr />
+                    <p class="text-muted">Código de error: 500 - Error Interno del Servidor</p>
+                    <div class="mt-4">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg">
+                            <i class="fas fa-home"></i> Volver a la página principal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
