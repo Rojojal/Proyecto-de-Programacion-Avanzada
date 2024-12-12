@@ -111,7 +111,28 @@ namespace Libreria.Controllers
             return RedirectToAction("Index");
         }
 
- 
+        // Actualiza la cantidad de los productos dentro del carrito
+        [Authorize(Roles = "User,Admin")]  
+        [HttpPost] 
+        public ActionResult ActualizarCantidad(int idProducto, int cantidad)
+        {
+            // Llama el método ObtenerCarrito para tener el carrito del usuario actual
+            var carrito = ObtenerCarrito();
+
+            // Busca si ya existe el producto en el carrito
+            var carritoProducto = db.CarritoProductos.FirstOrDefault(cp =>
+                cp.IdCarrito == carrito.IdCarrito && cp.IdProducto == idProducto);
+
+            if (carritoProducto != null)
+            {
+                carritoProducto.Cantidad = cantidad;
+                db.SaveChanges();  
+            }
+
+          
+            return RedirectToAction("Index");  
+        }
+
 
         [Authorize(Roles = "User,Admin")]
         // GET: Carrito/Details/5
