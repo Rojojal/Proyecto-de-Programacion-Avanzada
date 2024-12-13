@@ -3,59 +3,65 @@
 }
 
 <main class="container py-5">
+    <!-- Encabezado principal -->
     <section class="text-center mb-5">
-        <h1 id="title" class="display-5 fw-bold" style="color: #2c3e50;">Bienvenido a <span style="color: #3498db;">LibreMax</span></h1>
-        <p class="lead text-muted">Explora un mundo de historias, conocimiento e imaginación. Todo al alcance de un clic.</p>
-        <a href="@Url.Action("Index", "Producto")" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+        <h1 id="title" class="display-4 fw-bold" style="color: #0460D9;">
+            Bienvenido a <span style="color: #69BF41;">LibreMax</span>
+        </h1>
+        <p class="lead" style="color: #022859;">
+            Explora un mundo de historias, conocimiento e imaginación. Todo al alcance de un clic.
+        </p>
+        <a href="@Url.Action("Index", "Producto")" class="btn btn-primary btn-lg rounded-pill shadow" style="background-color: #0460D9;">
             Explorar catálogo
         </a>
     </section>
 
-
-    <!--libros destacados -->
+    <!-- Sección de Valores -->
     <section class="mb-5">
-        <h2 class="text-center fw-bold mb-4" style="color: #34495e;">Libros Destacados</h2>
-        <div class="row justify-content-center g-4">
-            <div class="col-md-4 text-center">
-                <div class="card shadow-sm border-0">
-                    <img src="/Content/Images/libro1.jpg" class="card-img-top rounded" alt="Libro destacado 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Título Destacado 1</h5>
-                        <p class="card-text text-muted">Un libro que te atrapará desde la primera página.</p>
-                        <a href="/Productos/Details/1" class="btn btn-outline-primary rounded-pill">Ver más</a>
-                    </div>
-                </div>
+        <h2 class="text-center fw-bold mb-4" style="color: #012340;">Nuestros Valores</h2>
+        <div class="row text-center">
+            <div class="col-12 col-md-4 mb-4">
+                <i class="fas fa-book-open fa-3x mb-3" style="color: #69BF41;"></i>
+                <h5 class="fw-bold" style="color: #012340;">Pasión por la Lectura</h5>
+                <p class="text-muted" style="color: #051726;">Nos apasiona ofrecer los mejores libros, para que todos encuentren una historia que los cautive.</p>
             </div>
-            <div class="col-md-4 text-center">
-                <div class="card shadow-sm border-0">
-                    <img src="/Content/Images/libro2.jpg" class="card-img-top rounded" alt="Libro destacado 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Título Destacado 2</h5>
-                        <p class="card-text text-muted">Un best-seller que no puedes dejar pasar.</p>
-                        <a href="/Productos/Details/2" class="btn btn-outline-primary rounded-pill">Ver más</a>
-                    </div>
-                </div>
+            <div class="col-12 col-md-4 mb-4">
+                <i class="fas fa-users fa-3x mb-3" style="color: #69BF41;"></i>
+                <h5 class="fw-bold" style="color: #012340;">Comunidad</h5>
+                <p class="text-muted" style="color: #051726;">Creemos en una comunidad lectora donde compartir opiniones y recomendaciones es clave.</p>
             </div>
-            <div class="col-md-4 text-center">
-                <div class="card shadow-sm border-0">
-                    <img src="/Content/Images/libro3.jpg" class="card-img-top rounded" alt="Libro destacado 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Título Destacado 3</h5>
-                        <p class="card-text text-muted">Explora este libro recomendado por críticos y lectores.</p>
-                        <a href="/Productos/Details/3" class="btn btn-outline-primary rounded-pill">Ver más</a>
-                    </div>
-                </div>
+            <div class="col-12 col-md-4 mb-4">
+                <i class="fas fa-truck fa-3x mb-3" style="color: #69BF41;"></i>
+                <h5 class="fw-bold" style="color: #012340;">Variedad en Cada Pedido</h5>
+                <p class="text-muted" style="color: #051726;">Desde los más recientes lanzamientos hasta clásicos atemporales, en cada entrega encontrarás todo lo que necesitas para disfrutar de la lectura.</p>
             </div>
         </div>
     </section>
 
-
     <!-- Sobre Nosotros -->
-    <section class="text-center py-5" style="background-color: #f9f9f9; border-radius: 10px;">
-        <h2 class="fw-bold mb-4" style="color: #2c3e50;">Sobre Nosotros</h2>
-        <p class="lead text-muted mx-auto" style="max-width: 800px;">
-            En <span style="color: #3498db; font-weight: bold;">LibreMax</span>, estamos comprometidos con conectar a lectores apasionados con las mejores historias. Desde novelas de ficción hasta libros educativos, nuestra misión es hacer que leer sea accesible y emocionante para todos.
+    <section class="text-center py-5 bg-light rounded">
+        <h2 class="fw-bold mb-4" style="color: #012340;">Sobre Nosotros</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 800px; color: #051726;">
+            En <span style="color: #69BF41;" class="fw-bold">LibreMax</span>, nos dedicamos a ofrecer una vasta selección de libros que inspiran, educan y entretienen. Desde títulos clásicos hasta lo más innovador en literatura contemporánea, nuestra misión es hacer que cada lector encuentre algo que lo apasione.
         </p>
-        <img src="/Content/Images/sobrenosotros.jpg" alt="Equipo de Librería Online" class="img-fluid rounded shadow-sm mt-4" style="max-width: 70%;">
+        <div class="d-flex justify-content-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732397.png" alt="Equipo de LibreMax" class="img-fluid rounded shadow mt-4" style="max-width: 10%;">
+        </div>
+
+        <div class="text-center mt-4">
+            <h4 style="color: #69BF41;">Síguenos en Redes Sociales</h4>
+            <a href="https://www.facebook.com/ufidelitas/" class="mx-2" style="font-size: 1.5rem; color: #3b5998; text-decoration: none;">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://ufidelitas.ac.cr/?currency=CRC" class="mx-2" style="font-size: 1.5rem; color: #00acee; text-decoration: none;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/ufidelitas/" class="mx-2" style="font-size: 1.5rem; color: #c13584; text-decoration: none;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/school/ufidelitas/posts/?feedView=all" class="mx-2" style="font-size: 1.5rem; color: #0077b5; text-decoration: none;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </section>
 </main>
