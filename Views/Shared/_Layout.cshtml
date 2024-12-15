@@ -46,8 +46,31 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p> Todos los derechos reservados &copy; @DateTime.Now.Year - LibreMax</p>
+        <footer class="bg-dark text-white mt-5 py-4">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Sobre LibreMax</h5>
+                        <p>Tu tienda en línea de libros de la mejor calidad y al mejor precio.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Productos", "Index", "Producto", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                            <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Redes Sociales</h5>
+                        <a href="https://www.facebook.com/ufidelitas/" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://ufidelitas.ac.cr/?currency=CRC" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ufidelitas/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <hr />
+                <p>&copy; @DateTime.Now.Year LibreMax - Todos los derechos reservados</p>
+            </div>
         </footer>
     </div>
 
